@@ -1,0 +1,425 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+main{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+nav, 
+.globalFooter{
+    display: flex;
+    background: #0b3d91;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+}
+
+.logo, 
+.globalFooter{
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.6em;
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.globalFooter a{
+    color:rgb(226, 226, 226); 
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+.globalFooter a:hover,
+.globalFooter a:active{
+    cursor: pointer;
+    border-bottom: 1px solid #fc3d21;
+}
+
+
+.nav-links{
+    list-style: none;
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background: #0b3d91;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    /* make the nav go out of the frame and ease in --- */
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+
+}
+
+ /* ---- make the nav slide into the viewframe again --- */
+.nav-active{
+    transform: translateX(0);
+}
+
+.nav-links a{
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.nav-links a:hover{
+    font-weight: 700;
+    color: #fc3d21;
+}
+
+.burger{
+    cursor: pointer;
+}
+.burger div{
+    width: 20px;
+    height: 2px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+}
+
+
+/* front page style -----*/ 
+#front-page, 
+#front-page nav{
+    background: #000;
+}
+
+#front-page .burger 
+.nav-links{
+    display: none;
+}
+
+.imgindex{
+    background: url(/img/index-moon-page.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;   
+}
+
+.front-page-text{
+    color: #fff;
+    text-align: center;
+    margin: 8vh auto;
+    width: 80%;
+    color: rgb(226, 226, 226);
+}
+
+.front-page-text h1{
+    padding-top: 8vh;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.read-more{
+    padding: 0.4em;
+    width: fit-content;
+}
+
+.read-more a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.read-more a:hover, 
+.read-more a:active{
+    font-weight: 700;
+    border-bottom: 1px solid #fc3d21;
+}
+
+/* ------ article 1 + article 2----*/
+.section-headings{
+    font-size: 1em;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.space-tech-page{
+    margin-top: 4vh;
+    margin-bottom: 4vh
+}
+ 
+
+#space-debris-video{
+    margin-bottom: 4vh;
+}
+
+#space-debris-video img{
+     width: 100vw;  
+}
+
+.what-is-space-junk-page p,
+.space-tech-page p{
+    text-align: left;
+    display: block;
+    padding-top: 10px;
+    font-weight: 300;
+}
+
+#orbital-trash-issue, 
+#leo, 
+#space-technology,
+#image-carousel, #quote{
+    margin-bottom: 7vh;       
+}
+
+/* making a animated counter */ 
+#kg-counter p,
+.counter{
+    padding: 0;
+    font-weight: 700;
+    padding-top: 20px;
+    letter-spacing: 2px;
+    text-align: center; 
+}
+
+.counter{
+    letter-spacing: 1vh;
+  font-size: 1.6em; 
+  color:#fc3d21 ; 
+}
+
+.image-text{
+    font-size: 1.1rem;
+    line-height: 2rem;
+    width: 70%;
+}
+
+/* slide images gallery */ 
+
+.image-slide-container{
+    position: relative;
+    margin-top: 2vh;
+}
+
+figure.image-slides {
+    display:none;
+}
+
+
+figure.image-slides:nth-child(5) {
+    display: block;
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.previous, 
+.next{
+    position: absolute;
+    cursor:pointer;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.previous:hover,
+.next:hover{
+    background: #0b3d91;
+    opacity: 80%;
+}
+ 
+.number-text{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.technology-page{
+    margin-top: 4vh;
+    
+}
+.technology-page a{
+    display: block;
+    text-decoration: none;
+    color:gray; 
+}
+
+.technology-page a:hover{
+    color: #000;
+}
+
+.arrow p,
+.arrow a{
+    margin-right: 0;
+    display: inline-block;
+}
+
+.last-page-tech a{
+    text-decoration: none;
+    color: gray
+}
+
+.arroe a:hover{
+cursor: pointer;
+}
+
+/*----------- technology page ----------*/
+.space-tech-page{
+    width: 80%;
+}
+.space-technology-head{
+text-align: center;
+}
+.section-container section{
+    margin-top: 5vh;
+}
+
+.space-tech-page p{
+    text-align: left;
+    display: block;
+    font-weight: 300;
+    padding:0;
+    margin-right: 4vh;
+    
+}
+
+.space-tech-page h2,
+.space-tech-page h3{
+    margin-bottom: 10px;
+}
+
+#nano-racks img{
+    width: 90%;
+}
+.space-tech-page h3{
+    font-style: italic;
+}
+
+#nano-racks-description{
+    margin-top: 1vh;
+}
+
+.space-tech-page h4{
+    border-top: 1px solid #fc3d21;
+    padding-top: 2vh;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.last-page-tech h4,
+.last-page-tech p{
+display: inline-block;
+cursor: pointer;
+}
+
+.last-page-tech p{
+    margin-right: 0;
+}
+
+.last-page-tech a{
+    text-decoration: none;
+    color: gray
+}
+
+.last-page-tech a:hover{
+cursor: pointer;
+}
+
+/*pc screen ----*/
+@media screen and (min-width: 768px){
+   main{
+        margin: 0 auto;
+        padding: 0 auto;
+    }
+
+    .nav-links{
+        width: 100vw;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        height: 6vh;
+        flex-direction: row;
+        align-items: center;
+        transform: translateX(0);
+        border-top: 1px solid #fc3d21;
+    }
+    /* ---- activate through javascript -----*/
+    .fixed {
+        position: fixed;
+        top: 0;
+        border-top: none;;
+      }
+    /*--------------------------------*/
+    .logo{
+        font-size: 0.8rem;
+    }
+
+    .nav-links a{
+        color:  #fff;
+        font-size: 0.8rem;
+    }
+
+    .nav-links a:hover{
+        font-size: 0.8rem;
+    }
+
+    .burger{
+        display: none;
+    }
+
+    main{
+        padding-top: 3rem;
+    }
+
+    .globalFooter a{
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    .section-headings{
+        margin: 0;
+    }
+
+    #leo p{
+        padding: 10px 0;
+    }
+    
+    #leo .section-headings{
+         padding-top: 3rem;
+    }
+    
+    .image-text{ 
+       font-size: 1.2rem;
+       width: 60%;
+    }
+
+    #orbital-trash-issue, 
+    #leo, .space-tech-page{
+        max-width: 70%;
+    }
+}
